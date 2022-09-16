@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nossas Categorias{% endblock %}
+
+{% block body %}
+    <div class="row align-items-center g-lg-5 py-5">
+        <h1 class="text-warning">Categorias disponíveis!</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Receitas</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for category in categories %}
+                <tr>
+                    <td>{{category.name}}</td>
+                    <td> 0 </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row align-items-center g-lg-5 py-5">
+        <h1 class="text-warning">Dia de inovar com <strong>Nova Categoria</strong>!</h1>
+        {{ form(categoryForm) }}
+    </div>
+    {% include '/share/contribution.html.twig' %}
+{% endblock %}

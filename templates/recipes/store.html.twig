@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nova Receita{% endblock %}
+
+{% block body %}
+    <div class="row align-items-center g-lg-5 py-5">
+        <h1>Hoje é dia de <strong>Receita Nova</strong></h1>
+        {{ form(recipeForm) }}
+    </div>
+{% endblock %}

@@ -1,3 +1,19 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+main:
+    path: /
+    controller: App\Controller\HomeController::index
+recipes:
+    path: /recipes
+    controller: App\Controller\RecipesController::index
+store_recipes:
+    path: /recipes/store
+    controller: App\Controller\RecipesController::store
+    methods: GET|POST
+show_recipe:
+    path: /recipes/show/{id}
+    controller: App\Controller\RecipesController::show
+show_categories:
+    path: /categories
+    controller: App\Controller\CategoryController::index
